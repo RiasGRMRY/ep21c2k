@@ -5,7 +5,7 @@ fileobject = open(filepath, "r+")
 
 max_length = 0
 names = ""
-x = 0
+total = 0
 correct = "BCCCDBBBBCDAAA"
 first = "BXCDBBACACADBC"
 
@@ -82,7 +82,7 @@ for line in fileobject:
 
 
 
-    x= x + 1
+    total= total + 1
     if len(line) > max_length:
         names = line
         max_length = len(line)
@@ -94,10 +94,10 @@ for line in fileobject:
             indexOfid = line[6:20]
 
 
-x= x - 1
+total = total - 1 # -1 Mivel az első sorban nem versenyző szerepel és az nem számít bele az összes indulóba.
 
 #2. Feladat
-print("2.Feladat: A versenyen ", x, "versenyző indult ")
+print("2.Feladat: A versenyen ", total, "versenyző indult ")
 
 
 
